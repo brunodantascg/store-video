@@ -1,1 +1,94 @@
-<h1>add-films works!</h1>
+
+<div class="container">
+    <div>
+        <form>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="formGroup1">Nome</label>
+                    <input type="text" class="form-control" id="name" placeholder="Nome do Filme">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="formGroup1">Ano</label>
+                    <input type="month" value="2011-08" class="form-control" id="ano" placeholder="2010">
+                </div>
+            </div>
+        
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="formGroup1">Gênero</label>
+                    <input type="text" class="form-control" id="genero" placeholder="Drama - Comédia">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="formGroup1">Classificação</label>
+                    <!--<input type="text" class="form-control" id="classificacao" placeholder="Todas as idades">-->
+                    <select class="form-control">
+                        <option selected>Selecione classificação etária do filme</option>
+                        <option value="1">L - Livre para todas as idades</option>
+                        <option value="2">10 - Não é recomendado para menores de 10 anos</option>
+                        <option value="3">12 - Não é recomendado para menores de 12 anos</option>
+                        <option value="4">14 - Não é recomendado para menores de 14 anos</option>
+                        <option value="5">16 - Não é recomendado para menores de 16 anos</option>
+                        <option value="6">18 - Não é recomendado para menores de 18 anos</option>
+                      </select>
+                </div>
+            </div>
+        
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="formGroup1">Duração</label>
+                    <input type="time" class="form-control" id="duracao" name="duracao" value="00:00" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="formGroup1">Idioma</label>
+                    <input type="text" class="form-control" id="idioma" placeholder="Inglês - Português (Brasil)">
+                </div>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="formGroup1">Produtora</label>
+                    <input type="text" class="form-control" id="produtora" placeholder="Actions Films">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="formGroup1">País</label>
+                    <input type="text" class="form-control" id="pais" placeholder="EUA">
+                </div>
+            </div>
+
+          </form>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-8">
+            <button (click) = "addFilms()" class = "btn btn-primary">Adicionar Filme</button>
+        </div>
+    </div>
+
+    <div>
+        <table class = "table table-striped table-bordered">
+            <tr style = "background: rgba(220, 228, 224, 0);" >
+                <th>ID</th>
+                <th>NOME</th>
+                <th>ANO</th>
+                <th>GÊNERO</th>
+                <th>CLASSIFICAÇÃO</th>
+                <th>DURAÇÃO</th>
+                <th>IDIOMA</th>
+                <th>PRODUTORA</th>
+                <th>PAÍS DE ORIGEM</th>
+                <th>ACÕES</th>
+            </tr>
+            <tr *ngFor="let films of film">
+                <td>{{ films.id }}</td>
+                <td>{{ films.nome }}</td>
+                <td>{{ films.ano }}</td>
+                <td>{{ films.genero }}</td>
+                <td>{{ films.classificacao }}</td>
+                <td>{{ films.duracao }}</td>
+                <td>{{ films.idioma }}</td>
+                <td>{{ films.produtora }}</td>
+                <td>{{ films.pais }}</td>                   
+            </tr>
+        </table>
+    </div> 
+
+</div>

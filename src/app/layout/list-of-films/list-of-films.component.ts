@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Films } from 'src/app/films';
+import { FilmsService } from 'src/app/films.service';
 
 @Component({
   selector: 'app-list-of-films',
@@ -7,9 +9,30 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListOfFilmsComponent implements OnInit {
 
-  constructor() { }
+  film: Films[] = [];
+
+//film: Films[] = FILMS;
+
+/* films: Films = {
+  id: 1,
+  nome: 'A lagoa azul',
+  ano: 1980,
+  genero: 'Drama',
+  classificacao: 'Todas as idades',
+  duracao: '2h 10m',
+  idioma: 'Português (Brasil) ',
+  produtora: 'Globo Filmes',
+  pais: 'EUA',
+  };*/
+
+  constructor(private filmsService: FilmsService) { }
 
   ngOnInit(): void {
+    this.getFilms();
+  }
+
+  getFilms(): void {
+    this.filmsService.getFilms().subscribe(films => this.film = films);
   }
 
 }
