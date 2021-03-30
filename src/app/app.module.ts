@@ -10,6 +10,7 @@ import { ListOfFilmsComponent } from './layout/list-of-films/list-of-films.compo
 import { LoginComponent } from './account/login/login.component';
 import { CreateAccountComponent } from './account/create-account/create-account.component';
 import { HomePageComponent } from './layout/home-page/home-page.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { HomePageComponent } from './layout/home-page/home-page.component';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule
   ],
   providers: [],

@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CreateAccountComponent } from './account/create-account/create-account.component';
 import { LoginComponent } from './account/login/login.component';
+import { AuthGuard } from './account/shared/auth.guard';
 import { AddFilmsComponent } from './layout/add-films/add-films.component';
 import { AuthenticationComponent } from './layout/authentication/authentication.component';
 import { HomePageComponent } from './layout/home-page/home-page.component';
@@ -16,7 +17,8 @@ const routes: Routes = [
       { path: 'homePage', component: HomePageComponent},
       { path: 'addFilms', component:  AddFilmsComponent},
       { path: 'listFilms', component: ListOfFilmsComponent}      
-    ]
+    ],
+    canActivate: [AuthGuard]
   },
   {
     path: '',
