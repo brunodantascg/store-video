@@ -5,6 +5,7 @@ import { Films } from './films';
 import { Observable, of } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { environment } from 'src/environments/environment';
 
 
 @Injectable({
@@ -14,7 +15,7 @@ export class FilmsService {
 
   //private filmsUrl = 'api/films'; 
 
-  private readonly API = 'localhost:3000/films';
+  private readonly API = `${environment.API}films`;
 
   constructor(private http: HttpClient) { }
 

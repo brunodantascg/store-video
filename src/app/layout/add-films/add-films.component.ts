@@ -19,12 +19,27 @@ export class AddFilmsComponent implements OnInit {
     //this.getFilms();
   }
 
-  //getFilms(): void {
-  //  this.filmsService.getFilms().subscribe(films => this.film = films);
-  //}
+/*
+  onSubmit(){
+    this.submitted = true;
+    console.log(this.form.value);
+    if(this.form.value){
+      console.log('submit');
+    }
+
+  }
+
+  onCancel(){
+    this.submitted = false;
+    this.form.reset();
+    // console.log('onCancel')
+  }
+*/
+  getFilms(): void {
+
+  }
 
   addFilms(): void {
 
   }
-
 }
