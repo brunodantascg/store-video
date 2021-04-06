@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 import { Films } from 'src/app/films';
 import { FilmsService } from 'src/app/films.service';
 
@@ -29,9 +30,7 @@ film: Films[] = [];
 
   ngOnInit() {
     //this.getFilms();
-    this.filmsService.getList()
-      .subscribe(dado => this.film = dado);
-
+    this.filmsService.getList().subscribe(dado => this.film = dado);
   }
 
   //getFilms(): void {

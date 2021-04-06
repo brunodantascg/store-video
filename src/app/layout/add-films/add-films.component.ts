@@ -17,6 +17,7 @@ export class AddFilmsComponent implements OnInit {
 
   ngOnInit(): void {
     //this.getFilms();
+    this.filmsService.getList().subscribe(dado => this.film = dado);
   }
 
 /*
