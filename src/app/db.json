@@ -1,0 +1,28 @@
+
+{
+    "films": [
+
+        { "id": 1, "nome": "A lagoa azul", "ano": 1980, "genero": "Drama", "classificacao": "L - Livre para todas as idades",
+        "duracao": "2h 10m", "idioma": "Português (Brasil)", "produtora": "Globo Filmes", "pais": "EUA" },
+        { "id": 2, "nome": "Tropa de Elite", "ano": 2010, "genero": "Ação", "classificacao": "16 - Não é recomendado para menores de 16 anos",
+        "duracao": "1h 50m", "idioma": "Português (Brasil)", "produtora": "Ação Filmes", "pais": "Brasil"  },
+        { "id": 3, "nome": "Volta ao mundo", "ano": 2014, "genero": "Ação", "classificacao": "16 - Não é recomendado para menores de 16 anos",
+        "duracao": "1h 40m", "idioma": "Português (Brasil)", "produtora": "Ação Filmes", "pais": "Brasil"  },
+        { "id": 4, "nome": "O Recepicionista", "ano": 2021, "genero": "Ação", "classificacao": "18 - Não é recomendado para menores de 18 anos",
+        "duracao": "1h 30m", "idioma": "Português (Brasil)", "produtora": "Ação Filmes", "pais": "Brasil"  },
+        { "id": 5, "nome": "Filhos de Istambul", "ano": 2021, "genero": "Ação", "classificacao": "16 - Não é recomendado para menores de 16 anos",
+        "duracao": "1h 20m", "idioma": "Português (Brasil)", "produtora": "Ação Filmes", "pais": "Brasil"  },
+        { "id": 6, "nome": "Dia do Sim", "ano": 2021, "genero": "Ação", "classificacao": "12 - Não é recomendado para menores de 12 anos",
+        "duracao": "1h 10m", "idioma": "Português (Brasil)", "produtora": "Ação Filmes", "pais": "Brasil"  },
+        { "id": 7, "nome": "Um Reino Unido", "ano": 2018, "genero": "Ação", "classificacao": "18 - Não é recomendado para menores de 18 anos",
+        "duracao": "1h 45m", "idioma": "Português (Brasil)", "produtora": "Ação Filmes", "pais": "Brasil"  },
+        { "id": 8, "nome": "O Atirador", "ano": 2019, "genero": "Ação", "classificacao": "12 - Não é recomendado para menores de 12 anos",
+        "duracao": "1h 43m", "idioma": "Português (Brasil)", "produtora": "Ação Filmes", "pais": "Brasil"  },
+        { "id": 9, "nome": "Felicidade por um fio", "ano": 2017, "genero": "Ação", "classificacao": "12 - Não é recomendado para menores de 12 anos",
+        "duracao": "1h 43m", "idioma": "Português (Brasil)", "produtora": "Ação Filmes", "pais": "Brasil"  },
+        { "id": 10, "nome": "No Limite do Amanhã", "ano": 2015, "genero": "Ação", "classificacao": "12 - Não é recomendado para menores de 12 anos",
+        "duracao": "1h 34m", "idioma": "Português (Brasil)", "produtora": "Ação Filmes", "pais": "Brasil"  },
+        { "id": 11, "nome": "100 Metros", "ano": 2012, "genero": "Ação", "classificacao": "14 - Não é recomendado para menores de 14 anos",
+        "duracao": "1h 25m", "idioma": "Português (Brasil)", "produtora": "Ação Filmes", "pais": "Brasil"  }
+        ]
+}

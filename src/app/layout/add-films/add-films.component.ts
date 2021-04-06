@@ -16,12 +16,12 @@ export class AddFilmsComponent implements OnInit {
   constructor(private filmsService: FilmsService) { }
 
   ngOnInit(): void {
-    this.getFilms();
+    //this.getFilms();
   }
 
-  getFilms(): void {
-    this.filmsService.getFilms().subscribe(films => this.film = films);
-  }
+  //getFilms(): void {
+  //  this.filmsService.getFilms().subscribe(films => this.film = films);
+  //}
 
   addFilms(): void {
 

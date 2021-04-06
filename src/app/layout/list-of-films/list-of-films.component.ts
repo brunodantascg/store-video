@@ -9,7 +9,7 @@ import { FilmsService } from 'src/app/films.service';
 })
 export class ListOfFilmsComponent implements OnInit {
 
-  film: Films[] = [];
+film: Films[] = [];
 
 //film: Films[] = FILMS;
 
@@ -27,12 +27,15 @@ export class ListOfFilmsComponent implements OnInit {
 
   constructor(private filmsService: FilmsService) { }
 
-  ngOnInit(): void {
-    this.getFilms();
+  ngOnInit() {
+    //this.getFilms();
+    this.filmsService.getList()
+      .subscribe(dado => this.film = dado);
+
   }
 
-  getFilms(): void {
-    this.filmsService.getFilms().subscribe(films => this.film = films);
-  }
+  //getFilms(): void {
+  //  this.filmsService.getFilms().subscribe(films => this.film = films);
+  //}
 
 }
