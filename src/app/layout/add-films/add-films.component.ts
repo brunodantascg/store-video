@@ -19,7 +19,6 @@ export class AddFilmsComponent implements OnInit {
   ngOnInit(): void {
     //this.getFilms();
     this.filmsService.getList().subscribe(dado => this.film = dado);
-
   }
 
 /*
@@ -42,7 +41,7 @@ export class AddFilmsComponent implements OnInit {
 
   }
 
-  deleteFilms(): void {
+  delete(): void {
 
   }
 
