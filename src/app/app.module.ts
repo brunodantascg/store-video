@@ -10,10 +10,11 @@ import { ListOfFilmsComponent } from './layout/list-of-films/list-of-films.compo
 import { LoginComponent } from './account/login/login.component';
 import { CreateAccountComponent } from './account/create-account/create-account.component';
 import { HomePageComponent } from './layout/home-page/home-page.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
+import { EditComponent } from './layout/edit/edit.component';
 
 @NgModule({
   declarations: [
@@ -25,12 +26,14 @@ import { InMemoryDataService } from './in-memory-data.service';
     LoginComponent,
     CreateAccountComponent,
     HomePageComponent,
+    EditComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpClientModule,
     AppRoutingModule,
+    ReactiveFormsModule,
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false }
     )

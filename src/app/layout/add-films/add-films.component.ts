@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder } from '@angular/forms';
 import { Films } from 'src/app/films';
 import { FilmsService } from 'src/app/films.service';
 
@@ -13,11 +14,12 @@ export class AddFilmsComponent implements OnInit {
 
   //film: Films[] = FILMS;
 
-  constructor(private filmsService: FilmsService) { }
+  constructor(private filmsService: FilmsService, private fb: FormBuilder) { }
 
   ngOnInit(): void {
     //this.getFilms();
     this.filmsService.getList().subscribe(dado => this.film = dado);
+
   }
 
 /*
