@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomePageComponent implements OnInit {
 
+  titleHome = 'Bem vindo a Vídeo Store One';
+
   constructor() { }
 
   ngOnInit(): void {

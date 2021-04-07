@@ -10,21 +10,23 @@ import { FilmsService } from 'src/app/films.service';
 })
 export class ListOfFilmsComponent implements OnInit {
 
-film: Films[] = [];
+  titleList = 'Lista de Filmes';
 
-//film: Films[] = FILMS;
+  film: Films[] = [];
 
-/* films: Films = {
-  id: 1,
-  nome: 'A lagoa azul',
-  ano: 1980,
-  genero: 'Drama',
-  classificacao: 'Todas as idades',
-  duracao: '2h 10m',
-  idioma: 'Português (Brasil) ',
-  produtora: 'Globo Filmes',
-  pais: 'EUA',
-  };*/
+  //film: Films[] = FILMS;
+
+  /* films: Films = {
+    id: 1,
+    nome: 'A lagoa azul',
+    ano: 1980,
+    genero: 'Drama',
+    classificacao: 'Todas as idades',
+    duracao: '2h 10m',
+    idioma: 'Português (Brasil) ',
+    produtora: 'Globo Filmes',
+    pais: 'EUA',
+    };*/
 
   constructor(private filmsService: FilmsService) { }
 

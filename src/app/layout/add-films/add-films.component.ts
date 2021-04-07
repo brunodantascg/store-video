@@ -10,6 +10,8 @@ import { FilmsService } from 'src/app/films.service';
 })
 export class AddFilmsComponent implements OnInit {
 
+  titleAdd = "Adicionar Filme";
+
   film: Films[] = [];
 
   //film: Films[] = FILMS;

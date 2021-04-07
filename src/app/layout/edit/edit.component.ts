@@ -8,6 +8,7 @@ import { FormGroup } from '@angular/forms';
 })
 export class EditComponent implements OnInit {
 
+  titleEdit = 'Editar Filme';
 
   constructor() { }
 
