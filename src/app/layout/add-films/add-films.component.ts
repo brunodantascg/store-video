@@ -14,7 +14,7 @@ export class AddFilmsComponent implements OnInit {
 
   //film: Films[] = FILMS;
 
-  constructor(private filmsService: FilmsService, private fb: FormBuilder) { }
+  constructor(private filmsService: FilmsService) { }
 
   ngOnInit(): void {
     //this.getFilms();

@@ -26,7 +26,18 @@ export class FilmsService {
   //}
 
   getList() : Observable <Films[]> {
-    return this.http.get<Films[]>(this.API);
+    return this.http.get<Films[]>(this.API)
+      .pipe(
+        catchError(this.handleError<Films[]>('getList', []))
+      );
+  }
+
+  private handleError<T>(operation = 'operation', result?: T) {
+    return (error: any): Observable<T> => {
+      console.error(error);
+      //this.log(`${operation} failed: ${error.message}`);
+      return of(result as T);
+    };
   }
 
 }
