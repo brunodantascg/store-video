@@ -40,6 +40,10 @@ export class AddFilmsComponent implements OnInit {
 
   }
 
+  deleteFilms(): void {
+
+  }
+
   addFilms(): void {
 
   }
