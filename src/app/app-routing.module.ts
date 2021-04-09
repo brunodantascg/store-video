@@ -17,7 +17,7 @@ const routes: Routes = [
     children: [
       { path: 'homePage', component: HomePageComponent},
       { path: 'addFilms', component: AddFilmsComponent},
-      { path: 'edit/:id', component: EditComponent},
+      { path: 'addFilms/edit/:id', component: EditComponent}, 
       { path: 'listFilms', component: ListOfFilmsComponent}      
     ],
     canActivate: [AuthGuard]

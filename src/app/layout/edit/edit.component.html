@@ -1,56 +1,56 @@
 <div class="container">
     <h1>{{ titleEdit }}</h1>
     <div>
-        <form>
+        <form [formGroup]="formEdit">
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="formGroup1">Nome</label>
-                    <input type="text" class="form-control" id="name" placeholder="Nome do Filme">
+                    <input type="text" class="form-control" id="name" placeholder="Nome do Filme" formControlName="nome">
                 </div>
                 <div class="form-group col-md-6">
                     <label for="formGroup1">Ano</label>
-                    <input type="text" class="form-control" id="ano" placeholder="2010">
+                    <input type="text" class="form-control" id="ano" placeholder="2010" formControlName="ano">
                 </div>
             </div>
         
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="formGroup1">Gênero</label>
-                    <input type="text" class="form-control" id="genero" placeholder="Drama - Comédia">
+                    <input type="text" class="form-control" id="genero" placeholder="Drama - Comédia" formControlName="genero">
                 </div>
                 <div class="form-group col-md-6">
                     <label for="formGroup1">Classificação</label>
-                    <input type="text" class="form-control" id="classificacao" placeholder="Todas as idades">
+                    <input type="text" class="form-control" id="classificacao" placeholder="Todas as idades" formControlName="classificacao">
                 </div>
             </div>
         
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="formGroup1">Duração</label>
-                    <input type="text" class="form-control" id="duracao" name="duracao" value="00:00" required>
+                    <input type="text" class="form-control" id="duracao" name="duracao" value="00:00" required formControlName="duracao">
                 </div>
                 <div class="form-group col-md-6">
                     <label for="formGroup1">Idioma</label>
-                    <input type="text" class="form-control" id="idioma" placeholder="Inglês - Português (Brasil)">
+                    <input type="text" class="form-control" id="idioma" placeholder="Inglês - Português (Brasil)" formControlName="idioma">
                 </div>
             </div>
             
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="formGroup1">Produtora</label>
-                    <input type="text" class="form-control" id="produtora" placeholder="Actions Films">
+                    <input type="text" class="form-control" id="produtora" placeholder="Actions Films" formControlName="produtora">
                 </div>
                 <div class="form-group col-md-6">
                     <label for="formGroup1">País</label>
-                    <input type="text" class="form-control" id="pais" placeholder="EUA">
+                    <input type="text" class="form-control" id="pais" placeholder="EUA" formControlName="pais">
                 </div>
             </div>
 
+            <div class="col-sm-offset-2 col-sm-8">
+                <button type = "submit"  (click) = "onSubmitEdit()" class = "btn btn-primary">Salvar Filme</button>
+                <button type = "button"  (click) = "onCancelEdit()" class = "btn btn-default">Cancelar</button>
+            </div>
+
           </form>
-    </div>
-    <div class="form-group">
-        <div class="col-sm-offset-2 col-sm-8">
-            <button (click) = "addEdit()" class = "btn btn-primary">Salvar Filme</button>
-        </div>
     </div>
 </div>

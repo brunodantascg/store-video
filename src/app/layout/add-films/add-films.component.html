@@ -79,7 +79,7 @@
                 <td>{{ films.produtora }}</td>
                 <td>{{ films.pais }}</td>
                 <td>
-                    <button  class="btn btn-success" routerLink="/edit/:id">Editar</button>
+                    <button (click)="onEdit(films.id)" class="btn btn-success" routerLink="edit/:id">Editar</button>
                     <button  class="btn btn-danger" title="delete film">Delete</button>
                 </td>                  
             </tr>

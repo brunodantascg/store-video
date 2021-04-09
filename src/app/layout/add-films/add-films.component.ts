@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Films } from 'src/app/films';
 import { FilmsService } from 'src/app/films.service';
 
@@ -17,7 +18,11 @@ export class AddFilmsComponent implements OnInit {
 
   film: Films[] = [];
 
-  constructor(private filmsService: FilmsService, private fb: FormBuilder) { }
+  constructor(
+    private filmsService: FilmsService,
+    private fb: FormBuilder,
+    private route: ActivatedRoute,
+    private router: Router) { }
 
   ngOnInit() {
     this.filmsService.getList()
@@ -52,6 +57,10 @@ export class AddFilmsComponent implements OnInit {
     this.submitted = false;
     this.form.reset();
     //console.log('onCancel')
+  }
+
+  onEdit(id: number){
+    this.router.navigate(['edit', id], {relativeTo: this.route});
   }
 
 }
