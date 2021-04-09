@@ -60,6 +60,12 @@ export class EditComponent implements OnInit {
     console.log(this.formEdit.value);
     if(this.formEdit.valid){
       console.log('submit');
+
+      this.filmsService.save(this.formEdit.value).subscribe(
+        success => {},
+        error => {}
+      )
+
       if(this.formEdit.value.id) {
         this.filmsService.updateFilms(this.formEdit.value).subscribe(
           success => console.log('Sucesso'),

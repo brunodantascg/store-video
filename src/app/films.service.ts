@@ -37,5 +37,12 @@ export class FilmsService {
     return this.http.get(`${this.API}/${id}`).pipe(take(1));
   }
 
+  save(films: any) {
+    if(films.id) {
+      return this.updateFilms(films);
+    } 
+    return this.create(films);
+  }
+
 }
 
