@@ -40,6 +40,11 @@ export class AddFilmsComponent implements OnInit {
     console.log(this.form.value);
     if(this.form.valid){
       console.log('submit')
+      this.filmsService.create(this.form.value).subscribe(
+        success => console.log('Sucesso'),
+        error => console.error(error),
+        () => console.log('request completo')
+      );
     }
   }
 
@@ -48,6 +53,5 @@ export class AddFilmsComponent implements OnInit {
     this.form.reset();
     //console.log('onCancel')
   }
-
 
 }

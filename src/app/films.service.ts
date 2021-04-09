@@ -3,7 +3,7 @@ import { Films } from './films';
 //import { FILMS } from './mock-films';
 
 import { Observable, of } from 'rxjs';
-import { catchError, map, tap } from 'rxjs/operators';
+import { catchError, map, tap, take } from 'rxjs/operators';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 
@@ -23,6 +23,10 @@ export class FilmsService {
 
   getList() {
     return  this.http.get<Films[]>(this.API);
+  }
+
+  create(films:[]) {
+    return this.http.post(this.API, films).pipe(take(1));
   }
 
 }
