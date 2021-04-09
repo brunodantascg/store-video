@@ -16,6 +16,8 @@ export class AddFilmsComponent implements OnInit {
   form!: FormGroup;
   submitted = false;
 
+  filmSelect!: Films;
+
   film: Films[] = [];
 
   constructor(
@@ -61,6 +63,10 @@ export class AddFilmsComponent implements OnInit {
 
   onEdit(id: number){
     this.router.navigate(['edit', id], {relativeTo: this.route});
+  }
+
+  onDelete() {
+    this.filmsService.remove(this.filmSelect.id).subscribe();
   }
 
 }

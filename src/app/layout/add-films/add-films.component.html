@@ -80,7 +80,7 @@
                 <td>{{ films.pais }}</td>
                 <td>
                     <button (click)="onEdit(films.id)" class="btn btn-success" routerLink="edit/:id">Editar</button>
-                    <button  class="btn btn-danger" title="delete film">Delete</button>
+                    <button (click)="onDelete()" class="btn btn-danger" title="delete film">Delete</button>
                 </td>                  
             </tr>
         </table>
