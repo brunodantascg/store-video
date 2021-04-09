@@ -12,7 +12,7 @@ export class AddFilmsComponent implements OnInit {
 
   titleAdd = "Adicionar Filme";
 
-  film: Films[] = [];
+  
 
   //film: Films[] = FILMS;
 
@@ -20,7 +20,7 @@ export class AddFilmsComponent implements OnInit {
 
   ngOnInit(): void {
     //this.getFilms();
-    this.filmsService.getList().subscribe(dado => this.film = dado);
+    
   }
 
 /*
@@ -44,7 +44,8 @@ export class AddFilmsComponent implements OnInit {
   }
 
   delete(): void {
-
+    // this.film = this.film.filter(h => h !== film);
+   // this.filmsService.deleteFilms(film.id).subscribe();
   }
 
   addFilms(): void {

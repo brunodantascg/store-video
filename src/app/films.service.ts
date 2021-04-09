@@ -17,32 +17,13 @@ export class FilmsService {
 
   private readonly API = `${environment.API}films`;
 
+  //private readonly API = 'http://localhost:3000/films';
+
   constructor(private http: HttpClient) { }
 
-  //getFilms(): Observable <Films[]> {
-  //  return this.http.get<Films[]>(this.filmsUrl)
-  //    .pipe(
-  //    );
-  //}
-
-  getList() : Observable <Films[]> {
-    return this.http.get<Films[]>(this.API)
-      .pipe(
-        catchError(this.handleError<Films[]>('getList', []))
-      );
-  }
-
-  deleteFilms() {
-
-  }
-
-
-  private handleError<T>(operation = 'operation', result?: T) {
-    return (error: any): Observable<T> => {
-      console.error(error);
-      //this.log(`${operation} failed: ${error.message}`);
-      return of(result as T);
-    };
+  getList() {
+    return  this.http.get<Films[]>(this.API);
   }
 
 }
+

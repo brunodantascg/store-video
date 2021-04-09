@@ -12,8 +12,6 @@ import { CreateAccountComponent } from './account/create-account/create-account.
 import { HomePageComponent } from './layout/home-page/home-page.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { InMemoryDataService } from './in-memory-data.service';
 import { EditComponent } from './layout/edit/edit.component';
 
 @NgModule({
@@ -33,10 +31,7 @@ import { EditComponent } from './layout/edit/edit.component';
     FormsModule,
     HttpClientModule,
     AppRoutingModule,
-    ReactiveFormsModule,
-    HttpClientInMemoryWebApiModule.forRoot(
-      InMemoryDataService, { dataEncapsulation: false }
-    )
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

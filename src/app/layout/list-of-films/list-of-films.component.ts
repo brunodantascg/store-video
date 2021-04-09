@@ -12,7 +12,9 @@ export class ListOfFilmsComponent implements OnInit {
 
   titleList = 'Lista de Filmes';
 
-  film: Films[] = [];
+  film: Films[] = [] ;
+
+  //film: Films[] = [];
 
   //film: Films[] = FILMS;
 
@@ -31,8 +33,9 @@ export class ListOfFilmsComponent implements OnInit {
   constructor(private filmsService: FilmsService) { }
 
   ngOnInit() {
-    //this.getFilms();
-    this.filmsService.getList().subscribe(dado => this.film = dado);
+    this.filmsService.getList()
+    .subscribe(dados => this.film = dados);
+    
   }
 
   //getFilms(): void {
