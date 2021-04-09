@@ -1,57 +1,57 @@
 <div class="container">
     <h1>{{ titleAdd }}</h1>
     <div>
-        <form>
+        <form [formGroup]="form">
             <div class="form-row">
                 <div class="form-group col-md-6">
-                    <label for="formGroup1">Nome</label>
-                    <input type="text" class="form-control" id="name" placeholder="Nome do Filme">
+                    <label for="validationCustom01">Nome</label>
+                    <input type="text" class="form-control" id="nome" placeholder="Nome do Filme" formControlName="nome">
                 </div>
                 <div class="form-group col-md-6">
-                    <label for="formGroup1">Ano</label>
-                    <input type="text" class="form-control" id="ano" placeholder="2010">
+                    <label for="validationCustom01">Ano</label>
+                    <input type="text" class="form-control" id="ano" placeholder="2010" formControlName="ano">
                 </div>
             </div>
         
             <div class="form-row">
                 <div class="form-group col-md-6">
-                    <label for="formGroup1">Gênero</label>
-                    <input type="text" class="form-control" id="genero" placeholder="Drama - Comédia">
+                    <label for="validationCustom01">Gênero</label>
+                    <input type="text" class="form-control" id="genero" placeholder="Drama - Comédia" formControlName="genero">
                 </div>
                 <div class="form-group col-md-6">
-                    <label for="formGroup1">Classificação</label>
-                    <input type="text" class="form-control" id="classificacao" placeholder="Todas as idades">
+                    <label for="validationCustom01">Classificação</label>
+                    <input type="text" class="form-control" id="classificacao" placeholder="Todas as idades" formControlName="classificacao">
                 </div>
             </div>
         
             <div class="form-row">
                 <div class="form-group col-md-6">
-                    <label for="formGroup1">Duração</label>
-                    <input type="text" class="form-control" id="duracao" name="duracao" value="00:00" required>
+                    <label for="validationCustom01">Duração</label>
+                    <input type="text" class="form-control" id="duracao" name="duracao" value="00:00" required formControlName="duracao">
                 </div>
                 <div class="form-group col-md-6">
-                    <label for="formGroup1">Idioma</label>
-                    <input type="text" class="form-control" id="idioma" placeholder="Inglês - Português (Brasil)">
+                    <label for="validationCustom01">Idioma</label>
+                    <input type="text" class="form-control" id="idioma" placeholder="Inglês - Português (Brasil)" formControlName="idioma">
                 </div>
             </div>
             
             <div class="form-row">
                 <div class="form-group col-md-6">
-                    <label for="formGroup1">Produtora</label>
-                    <input type="text" class="form-control" id="produtora" placeholder="Actions Films">
+                    <label for="validationCustom01">Produtora</label>
+                    <input type="text" class="form-control" id="produtora" placeholder="Actions Films" formControlName="produtora">
                 </div>
                 <div class="form-group col-md-6">
-                    <label for="formGroup1">País</label>
-                    <input type="text" class="form-control" id="pais" placeholder="EUA">
+                    <label for="validationCustom01">País</label>
+                    <input type="text" class="form-control" id="pais" placeholder="EUA" formControlName="pais">
                 </div>
             </div>
-
+            <div>
+                <div class="col-sm-offset-2 col-sm-8">
+                    <button type = "submit"  (click) = "onSubmit()" class = "btn btn-primary">Adicionar Filme</button>
+                    <button type = "button"  (click) = "onCancel()" class = "btn btn-default">Cancelar</button>
+                </div>
+            </div>
           </form>
-    </div>
-    <div class="form-group">
-        <div class="col-sm-offset-2 col-sm-8">
-            <button (click) = "addFilms()" class = "btn btn-primary">Adicionar Filme</button>
-        </div>
     </div>
 
     <div>
@@ -79,8 +79,8 @@
                 <td>{{ films.produtora }}</td>
                 <td>{{ films.pais }}</td>
                 <td>
-                    <button (click) = "getFilms( )"  class="btn btn-success" routerLink="/edit">Editar</button>
-                    <button (click) = "delete()" class="btn btn-danger" title="delete film">Delete</button>
+                    <button  class="btn btn-success" routerLink="/edit/:id">Editar</button>
+                    <button  class="btn btn-danger" title="delete film">Delete</button>
                 </td>                  
             </tr>
         </table>
