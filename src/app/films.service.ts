@@ -29,5 +29,13 @@ export class FilmsService {
     return this.http.post(this.API, films).pipe(take(1));
   }
 
+  updateFilms(films: any) {
+    return this.http.put(`${this.API}/${films.id}`, films).pipe(take(1));
+  }
+
+  loadById(id: number) {
+    return this.http.get(`${this.API}/${id}`).pipe(take(1));
+  }
+
 }
 
