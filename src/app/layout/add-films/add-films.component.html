@@ -68,7 +68,7 @@
                 <th>PAÍS DE ORIGEM</th>
                 <th>ACÕES</th>
             </tr>
-           <!-- <tr>
+            <tr *ngFor="let films of film">
                 <td>{{ films.id }}</td>
                 <td>{{ films.nome }}</td>
                 <td>{{ films.ano }}</td>
@@ -82,7 +82,7 @@
                     <button (click) = "getFilms( )"  class="btn btn-success" routerLink="/edit">Editar</button>
                     <button (click) = "delete()" class="btn btn-danger" title="delete film">Delete</button>
                 </td>                  
-            </tr>-->
+            </tr>
         </table>
     </div> 
 

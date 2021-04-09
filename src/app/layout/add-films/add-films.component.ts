@@ -12,33 +12,15 @@ export class AddFilmsComponent implements OnInit {
 
   titleAdd = "Adicionar Filme";
 
-  
-
-  //film: Films[] = FILMS;
+  film: Films[] = [];
 
   constructor(private filmsService: FilmsService) { }
 
-  ngOnInit(): void {
-    //this.getFilms();
-    
+  ngOnInit() {
+    this.filmsService.getList()
+    .subscribe(dados => this.film = dados);
   }
 
-/*
-  onSubmit(){
-    this.submitted = true;
-    console.log(this.form.value);
-    if(this.form.value){
-      console.log('submit');
-    }
-
-  }
-
-  onCancel(){
-    this.submitted = false;
-    this.form.reset();
-    // console.log('onCancel')
-  }
-*/
   getFilms(): void {
 
   }

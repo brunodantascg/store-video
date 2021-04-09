@@ -12,7 +12,7 @@ export class ListOfFilmsComponent implements OnInit {
 
   titleList = 'Lista de Filmes';
 
-  film: Films[] = [] ;
+  film: Films[] = [];
 
   //film: Films[] = [];
 
